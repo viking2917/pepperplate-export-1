@@ -1,7 +1,7 @@
 model = [{element: "recipeName",query: "#cphMiddle_cphMain_lblTitle"},{element: "recipeImageURL",query: "#cphMiddle_cphMain_imgRecipeThumb",image: true},{element: "recipeYield",query: "#cphMiddle_cphMain_lblYield"},{element: "recipeMethod",query: "ol.dirgroupitems > li",multiple: true},{element: "recipeIngredients",query: "ul.inggroupitems > li > span.content",multiple: true},{element: "recipeCookTime",query: "#cphMiddle_cphMain_lblTotalTime"}];
 
 
-if(location.href=="http://www.pepperplate.com/recipes/default.aspx?123"){
+if(location.href=="https://www.pepperplate.com/recipes/default.aspx?123"){
   loopLoadMore(document).then(()=>{
     urlList = getURLList(DOMtoString(document));
     chrome.runtime.sendMessage({ urlList: urlList });
